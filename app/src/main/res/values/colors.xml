@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#38D39F</color>
+    <color name="purple">#6D3EFF</color>
+    <color name="black">#FF000000</color>
+    <color name="black_tr">#4D000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#FFD25E</color>
+    <color name="blue">#4696EC</color>
+    <color name="brown">#F19753</color>
+    <color name="grade_background">#E5FFF5</color>
+    <color name="profit_background">#EEF0F5</color>
+    <color name="refill_background">#B2B0FF</color>
+    <color name="bonus_background">#F6C5EF</color>
+    <color name="menu_fragment_background">#E5E5E5</color>
+    <color name="light_green">#74C8AC</color>
+</resources>

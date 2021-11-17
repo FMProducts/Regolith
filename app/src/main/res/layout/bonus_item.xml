@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:cardBackgroundColor="@color/bonus_background"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackground">
+
+
+            <ImageView
+                android:id="@+id/alert"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_alert_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="26dp"
+                android:alpha="0.4"
+                android:text="@string/bonus_title"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bonus"
+                tools:text="607,578.06" />
+
+
+            <RadioGroup
+                android:id="@+id/currency_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/total_price"
+                app:layout_constraintTop_toTopOf="@id/total_price"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@id/total_price"
+                >
+
+                <RadioButton
+                    android:id="@+id/rub"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/currency_radio_button_selector"
+                    android:textColor="@drawable/currency_radio_button_text_selector"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    app:fontFamily="@font/sf_bold"
+                    android:textSize="12sp"
+                    android:text="RUB" />
+
+
+
+                <RadioButton
+                    android:id="@+id/usd"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/currency_radio_button_selector"
+                    android:textColor="@drawable/currency_radio_button_text_selector"
+                    android:button="@android:color/transparent"
+                    app:fontFamily="@font/sf_bold"
+                    android:textSize="12sp"
+                    android:text="USD" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/in_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.4"
+                android:text="@string/in_team"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/total_price" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/in_team">
+
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_ellipse"
+                    android:src="@drawable/ic_users"
+                    android:padding="6dp"
+                    />
+
+                <TextView
+                    android:id="@+id/in_team_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    app:fontFamily="@font/sf_bold"
+                    tools:text="480" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/in_team">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:src="@drawable/ic_user_plus"
+                        android:textColor="@color/black"
+                        android:padding="8dp"/>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/refill_rub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="31dp"
+                android:alpha="0.4"
+                android:text="@string/refill_rub"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/refill_rub_value"
+                />
+
+
+            <TextView
+                android:id="@+id/withdrawn_rub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:alpha="0.4"
+                android:text="@string/withdrawn_rub"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintStart_toEndOf="@id/refill_rub"
+                app:layout_constraintTop_toTopOf="@id/refill_rub"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <TextView
+                android:id="@+id/refill_rub_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26dp"
+                android:textColor="@color/black"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintStart_toStartOf="@id/refill_rub"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="76,616.42 $" />
+
+
+
+            <TextView
+                android:id="@+id/withdrawn_rub_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintStart_toStartOf="@id/withdrawn_rub"
+                app:layout_constraintTop_toBottomOf="@id/withdrawn_rub"
+                tools:text="0,0 ₽" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

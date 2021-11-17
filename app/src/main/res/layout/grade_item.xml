@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/grade_background"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackground"
+            >
+
+
+            <ImageView
+                android:id="@+id/alert"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_alert_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:id="@+id/grade_briefcase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grade_briefcase"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="26dp"
+                android:layout_marginStart="16dp"
+                android:alpha="0.4"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/grade_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="145,309.39 $"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintTop_toBottomOf="@id/grade_briefcase"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                />
+
+
+
+            <TextView
+                android:id="@+id/grade_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="78.16 %"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintTop_toBottomOf="@id/grade_usd"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/primary"
+                />
+
+            <ImageView
+                android:id="@+id/progress_area"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rectangle_purple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintTop_toBottomOf="@id/grade_percent"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <ImageView
+                android:id="@+id/progress_value"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:src="@drawable/rectangle_green"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="@id/progress_area"
+                app:layout_constraintTop_toTopOf="@id/progress_area"
+                app:layout_constraintBottom_toBottomOf="@id/progress_area"
+                />
+
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:src="@drawable/ic_ellipse"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toTopOf="@id/in_stocks"
+                app:layout_constraintStart_toStartOf="@id/in_stocks"
+                app:tint="@color/purple"
+                />
+
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:src="@drawable/ic_ellipse"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toTopOf="@id/remaining_usd"
+                app:layout_constraintStart_toStartOf="@id/remaining_usd"
+                app:tint="@color/primary"
+                />
+
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:src="@drawable/ic_ellipse"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toTopOf="@id/remaining_rub"
+                app:layout_constraintStart_toStartOf="@id/remaining_rub"
+                app:tint="@color/orange"
+                />
+
+
+            <TextView
+                android:id="@+id/in_stocks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/in_stock"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintTop_toBottomOf="@id/progress_area"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="42dp"
+                android:layout_marginStart="16dp"
+                android:alpha="0.4"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/remaining_rub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remaining_rub"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintTop_toBottomOf="@id/progress_area"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="42dp"
+                android:layout_marginEnd="16dp"
+                android:alpha="0.4"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/remaining_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remaining_usd"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintTop_toBottomOf="@id/progress_area"
+                app:layout_constraintEnd_toStartOf="@id/remaining_rub"
+                app:layout_constraintStart_toEndOf="@id/in_stocks"
+                android:layout_marginTop="42dp"
+                android:layout_marginEnd="16dp"
+                android:alpha="0.4"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:id="@+id/in_stocks_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="76,616.42 $"
+                app:fontFamily="@font/sf_bold"
+                android:layout_marginBottom="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/in_stocks"
+                app:layout_constraintTop_toBottomOf="@id/in_stocks"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:id="@+id/remaining_usd_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="68,692.72 $"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintStart_toStartOf="@id/remaining_usd"
+                app:layout_constraintTop_toBottomOf="@id/remaining_usd"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/remaining_rub_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="0,0 ₽"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintStart_toStartOf="@id/remaining_rub"
+                app:layout_constraintTop_toBottomOf="@id/remaining_rub"
+                android:textColor="@color/black"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

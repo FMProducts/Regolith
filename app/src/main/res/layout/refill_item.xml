@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:cardBackgroundColor="@color/refill_background"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackground">
+
+
+            <ImageView
+                android:id="@+id/alert"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_alert_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/refill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="26dp"
+                android:alpha="0.4"
+                android:text="@string/refill"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/refill"
+                tools:text="145,309.39 $" />
+
+
+            <TextView
+                android:id="@+id/withdrawn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.4"
+                android:text="@string/withdrawn"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/total" />
+
+
+            <TextView
+                android:id="@+id/withdrawn_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/withdrawn"
+                tools:text="145,309.39 $" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/withdrawn">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/plus"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/refill_rub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="31dp"
+                android:alpha="0.4"
+                android:text="@string/refill_rub"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/withdrawn_usd"
+                />
+
+
+            <TextView
+                android:id="@+id/refill_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="16dp"
+                android:alpha="0.4"
+                android:text="@string/refill_USD"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:fontFamily="@font/sf_medium"
+                app:layout_constraintStart_toEndOf="@id/refill_rub"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/withdrawn_usd" />
+
+
+            <TextView
+                android:id="@+id/refill_rub_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26dp"
+                android:textColor="@color/black"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/refill_rub"
+                app:layout_constraintTop_toBottomOf="@id/refill_rub"
+                tools:text="76,616.42 $" />
+
+
+
+            <TextView
+                android:id="@+id/refill_usd_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:fontFamily="@font/sf_bold"
+                app:layout_constraintStart_toStartOf="@id/refill_usd"
+                app:layout_constraintTop_toBottomOf="@id/refill_usd"
+                tools:text="0,0 ₽" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

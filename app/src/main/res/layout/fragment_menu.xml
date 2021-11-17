@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.menu.MenuFragment"
+    android:background="@color/menu_fragment_background">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_functions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/icon_01"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/light_green"
+                    android:src="@drawable/ic_dashboard_white"
+                    android:padding="6dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="Приборная панель"
+                    app:layout_constraintTop_toTopOf="@id/icon_01"
+                    app:layout_constraintBottom_toBottomOf="@id/icon_01"
+                    app:layout_constraintStart_toEndOf="@id/icon_01"
+                    android:layout_marginStart="16dp"
+                    app:fontFamily="@font/sf_bold"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    />
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="24dp"
+                    />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#F6F5F7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/icon_02"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/purple"
+                    android:src="@drawable/ic_briefcase_white"
+                    android:padding="6dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="Портфель"
+                    app:layout_constraintTop_toTopOf="@id/icon_02"
+                    app:layout_constraintBottom_toBottomOf="@id/icon_02"
+                    app:layout_constraintStart_toEndOf="@id/icon_02"
+                    android:layout_marginStart="16dp"
+                    app:fontFamily="@font/sf_bold"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    />
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="24dp"
+                    />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#F6F5F7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_02"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/icon_03"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/orange"
+                    android:src="@drawable/ic_process_white"
+                    android:padding="6dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="Торговый счёт"
+                    app:layout_constraintTop_toTopOf="@id/icon_03"
+                    app:layout_constraintBottom_toBottomOf="@id/icon_03"
+                    app:layout_constraintStart_toEndOf="@id/icon_03"
+                    android:layout_marginStart="16dp"
+                    app:fontFamily="@font/sf_bold"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    />
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="24dp"
+                    />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#F6F5F7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_03"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/icon_04"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/blue"
+                    android:src="@drawable/partners_white"
+                    android:padding="6dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="Партнёрский счёт"
+                    app:layout_constraintTop_toTopOf="@id/icon_04"
+                    app:layout_constraintBottom_toBottomOf="@id/icon_04"
+                    app:layout_constraintStart_toEndOf="@id/icon_04"
+                    android:layout_marginStart="16dp"
+                    app:fontFamily="@font/sf_bold"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    />
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="24dp"
+                    />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#F6F5F7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_04"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/icon_05"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/brown"
+                    android:src="@drawable/ic_star_half_alt_white"
+                    android:padding="6dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="Баллы"
+                    app:layout_constraintTop_toTopOf="@id/icon_05"
+                    app:layout_constraintBottom_toBottomOf="@id/icon_05"
+                    app:layout_constraintStart_toEndOf="@id/icon_05"
+                    android:layout_marginStart="16dp"
+                    app:fontFamily="@font/sf_bold"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    />
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="24dp"
+                    />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#F6F5F7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_05"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/auth_functions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_functions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/white"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            >
+
+            <ImageView
+                android:id="@+id/icon_06"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/rectangle"
+                android:backgroundTint="@color/black"
+                android:src="@drawable/ic_signout_white"
+                android:padding="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="Выход"
+                app:layout_constraintTop_toTopOf="@id/icon_06"
+                app:layout_constraintBottom_toBottomOf="@id/icon_06"
+                app:layout_constraintStart_toEndOf="@id/icon_06"
+                android:layout_marginStart="16dp"
+                app:fontFamily="@font/sf_bold"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                />
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/arrow_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="24dp"
+                />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#F6F5F7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon_06"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
